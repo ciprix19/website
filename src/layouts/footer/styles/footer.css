@@ -1,0 +1,22 @@
+footer {
+    background-color: var(--color-background);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1px var(--color-border) solid;
+    padding: 2rem;
+}
+
+/* footer > nav > ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+footer li {
+    padding-block: 2rem;
+}
+
+footer {
+    flex-shrink: 0;
+} */

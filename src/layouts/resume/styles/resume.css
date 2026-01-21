@@ -1,0 +1,50 @@
+.profile-section > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.profile-section h1 {
+    text-align: center;
+}
+.profile-section span img {
+    display: inline;
+}
+
+#resume h1 {
+    text-align: center;
+}
+
+.div-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+.div-buttons button {
+    flex: 1;
+    padding: 1rem;
+    max-inline-size: 20rem;
+}
+.div-buttons a {
+    display: flex;
+    flex: 1;
+    max-inline-size: 20rem;
+    text-decoration: none;
+}
+.div-buttons a:hover {
+    /* https://stackoverflow.com/questions/22559756/changing-hover-to-touch-click-for-mobile-devices */
+    color: var(--color-primary-text);
+    background-color: var(--color-background-medium);
+}
+.div-buttons > a > span {
+    margin: auto;
+}
+.mode-buttons-section {
+    padding-bottom: 0;
+}
+
+@media screen and (width > 720px) {
+    .professional-path-entry {
+        padding-inline: 3rem;
+    }
+}

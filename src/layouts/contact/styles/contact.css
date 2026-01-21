@@ -1,0 +1,38 @@
+.field {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0rem;
+}
+
+.field textarea {
+    block-size: 10rem;
+    padding: 0.5rem;
+}
+
+.two-column {
+    display: grid;
+}
+
+.two-column .socials-div {
+    place-self: center;
+}
+
+.two-column button {
+
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-block: 1rem;
+    /* margin-left: 1rem; */
+}
+
+
+
+@media screen and (width > 720px) {
+    .two-column {
+        grid-template-columns: 1fr 1fr;
+    }
+}

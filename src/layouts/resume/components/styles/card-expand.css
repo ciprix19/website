@@ -1,0 +1,50 @@
+.card-expand {
+    background: linear-gradient(to top, var(--color-background-light) 30%, var(--color-border));
+    border-top: 0.2rem solid var(--color-border);
+    border-left: 0.2rem solid var(--color-border);
+    border-right: 0.2rem solid var(--color-border);
+    border-radius: 2rem;
+    margin-block: 2rem;
+    text-align: center;
+}
+.card-expand > h3 {
+    padding: 1rem;
+}
+
+/* use auto for max-height */
+.card-expand .expandable {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /* overflow: hidden; */
+    border-top: 0.2rem var(--color-accent-strong) solid;
+    padding: 0;
+    height: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition:
+        padding 1s ease,
+        height 1s ease,
+        transform 1s ease;
+
+}
+/* starting-style!!! */
+.card-expand .expandable.active {
+    padding: 2rem;
+    opacity: 1;
+    height: 100%;
+    transform: scaleY(1);
+}
+
+.expand-button {
+    width: 100%;
+    background-color: var(--color-background-light);
+    border-top: 0.2rem var(--color-accent-strong) solid;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    /* in loc de overflow hidden in .card-expand .expandable */
+    /* z-index: 3; */
+    /* position: relative; */
+}

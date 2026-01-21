@@ -1,0 +1,36 @@
+/*
+.skills-category-section .card-extend {
+    margin-block: 2rem;
+    text-align: center;
+}
+.card-extend > div > h3 {
+    padding: 1rem;
+}
+.card-extend .skills {
+    border-top: 0.2rem var(--color-accent-strong) solid;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition:
+        max-height 500ms ease,
+        padding 500ms ease,
+        opacity 300ms ease;
+}
+.card-extend .skills.active {
+    max-height: 30rem;
+    padding: 2rem;
+    opacity: 1;
+}
+
+.extend-button {
+    width: 100%;
+    background-color: var(--color-background-light);
+    border-top: 0.2rem var(--color-accent-strong) solid;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+} */

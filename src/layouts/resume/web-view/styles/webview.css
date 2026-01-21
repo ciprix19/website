@@ -1,0 +1,32 @@
+/* override this so the image does not shrink */
+.icon-column > img {
+    max-inline-size: none;
+}
+.icon-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-block-start: 0.3rem;
+}
+.icon-column::after {
+    content: '';
+    flex: 1;
+    margin-top: 0.4rem;
+    inline-size: 0.18rem;
+    /* background: linear-gradient(var(--color-accent-light), var(--color-accent-strong)); */
+    /* background: linear-gradient(var(--color-accent-light), #00000057, var(--color-accent-strong)); */
+    background: linear-gradient(var(--color-accent-light), #1212127c, #12121200);
+}
+
+.icon-column path {
+    fill: blue;
+}
+
+.card-entry {
+    display: flex;
+    padding: 1rem;
+    text-align: start;
+}
+.card-entry > div {
+    padding: 1rem;
+}

@@ -1,0 +1,8 @@
+.resizable-div {
+    background-color: red;
+    /* overflow: hidden; */
+}
+
+.resizable-div > div {
+    display: none;
+}
