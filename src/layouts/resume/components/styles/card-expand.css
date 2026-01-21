@@ -11,12 +11,29 @@
     padding: 1rem;
 }
 
-/* use auto for max-height */
 .card-expand .expandable {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    /* overflow: hidden; */
+    border-top: 0.2rem var(--color-accent-strong) solid;
+    max-height: 0px;
+    transition: max-height 1s linear, padding-block 1s linear;
+    overflow: hidden;
+    padding-inline: 2rem;
+    padding-block: 0;
+}
+/* starting-style!!! */
+.card-expand .expandable.active {
+    max-height: 500px;
+    transition: max-height 1s linear, padding-block 1s linear;
+    padding: 2rem;
+}
+
+/* use auto for max-height */
+/* .card-expand .expandable {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
     border-top: 0.2rem var(--color-accent-strong) solid;
     padding: 0;
     height: 0;
@@ -28,13 +45,12 @@
         transform 1s ease;
 
 }
-/* starting-style!!! */
 .card-expand .expandable.active {
     padding: 2rem;
     opacity: 1;
     height: 100%;
     transform: scaleY(1);
-}
+} */
 
 .expand-button {
     width: 100%;
