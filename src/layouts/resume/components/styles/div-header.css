@@ -1,7 +1,7 @@
 .div-header {
     display: flex;
     align-items: center;
-    letter-spacing: clamp(0rem, 0.3vw ,0.3rem);
+    letter-spacing: clamp(0rem, 0.3vw, 0.3rem);
     margin-top: 3rem;
     margin-bottom: 1.5rem;
 }
@@ -10,5 +10,9 @@
     flex: 1;
     margin-left: 0.5rem;
     block-size: 0.1rem;
-    background: linear-gradient(to right, var(--color-border), var(--color-background-light));
+    background: linear-gradient(
+        to right,
+        var(--color-border),
+        var(--color-background-light)
+    );
 }

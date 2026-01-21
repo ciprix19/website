@@ -15,7 +15,11 @@
     inline-size: 0.18rem;
     /* background: linear-gradient(var(--color-accent-light), var(--color-accent-strong)); */
     /* background: linear-gradient(var(--color-accent-light), #00000057, var(--color-accent-strong)); */
-    background: linear-gradient(var(--color-accent-light), #1212127c, #12121200);
+    background: linear-gradient(
+        var(--color-accent-light),
+        #1212127c,
+        #12121200
+    );
 }
 
 .icon-column path {

@@ -1,4 +1,4 @@
-import DivHeader from "../../components/div-header";
+import DivHeader from '../../components/div-header';
 
 type ProfessionalPathEntryType = {
     position: String;
@@ -8,18 +8,28 @@ type ProfessionalPathEntryType = {
     startDate: String;
     endDate: String;
     description: String;
-}
-function ProfessionalPathEntry({ position, company, location, imgSource, startDate, endDate, description } : ProfessionalPathEntryType) {
+};
+function ProfessionalPathEntry({
+    position,
+    company,
+    location,
+    imgSource,
+    startDate,
+    endDate,
+    description,
+}: ProfessionalPathEntryType) {
     return (
-        <div className='card-entry'>
-            <div className='icon-column'>
-                <img className='icon' src={`images/${imgSource}`} alt='job' />
+        <div className="card-entry">
+            <div className="icon-column">
+                <img className="icon" src={`images/${imgSource}`} alt="job" />
             </div>
             <div>
                 <h3>{position}</h3>
                 <p>{company}</p>
                 <p>{location}</p>
-                <p>{startDate} - {endDate}</p>
+                <p>
+                    {startDate} - {endDate}
+                </p>
                 <br></br>
                 <p>{description}</p>
             </div>
@@ -29,7 +39,7 @@ function ProfessionalPathEntry({ position, company, location, imgSource, startDa
 export default function ProfessionalPathSection() {
     return (
         <DivHeader isWrapped={true} sectionTitle={'PROFESSIONAL PATH'}>
-            <div className='card'>
+            <div className="card">
                 <ProfessionalPathEntry
                     position={'Cloud Engineer L1 - GCP'}
                     company={'Cognizant Softvision'}
@@ -37,8 +47,10 @@ export default function ProfessionalPathSection() {
                     imgSource={'/icons/cloud.svg'}
                     startDate={'May 2024'}
                     endDate={'September 2025'}
-                    description={'Provided advanced technical support on over 200 tickets for Apigee X and Apigee Hybrid platforms across both production and development environments.'}
-                    />
+                    description={
+                        'Provided advanced technical support on over 200 tickets for Apigee X and Apigee Hybrid platforms across both production and development environments.'
+                    }
+                />
                 <ProfessionalPathEntry
                     position={'Frontend Developer Intern'}
                     company={'Accenture Industrial Software Solution SA'}
@@ -46,8 +58,10 @@ export default function ProfessionalPathSection() {
                     imgSource={'/icons/web-dev.svg'}
                     startDate={'August 2022'}
                     endDate={'September 2022'}
-                    description={'Participated in the design and development of a secure, Angular-based frontend application for API key management.'}
-                    />
+                    description={
+                        'Participated in the design and development of a secure, Angular-based frontend application for API key management.'
+                    }
+                />
             </div>
         </DivHeader>
     );

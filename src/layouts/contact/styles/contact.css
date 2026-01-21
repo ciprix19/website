@@ -18,7 +18,6 @@
 }
 
 .two-column button {
-
 }
 
 .social {
@@ -28,8 +27,6 @@
     margin-block: 1rem;
     /* margin-left: 1rem; */
 }
-
-
 
 @media screen and (width > 720px) {
     .two-column {
