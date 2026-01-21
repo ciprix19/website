@@ -1,4 +1,4 @@
-import type { MouseEvent } from 'react';
+// import type { MouseEvent } from 'react';
 import './styles/contact.css'
 
 type SocialsDivType = {
@@ -20,9 +20,9 @@ function SocialsDiv({ socialPlatform, linkToPlatform } : SocialsDivType) {
 
 export default function Contact() {
 
-    function handleSubmitButton(e: MouseEvent<HTMLButtonElement>) {
-        e.preventDefault();
-    }
+    // function handleSubmitButton(e: MouseEvent<HTMLButtonElement>) {
+    //     e.preventDefault();
+    // }
 
     return (
         <section id='contact'>
