@@ -9,17 +9,6 @@
     padding: 0.5rem;
 }
 
-.two-column {
-    display: grid;
-}
-
-.two-column .socials-div {
-    place-self: center;
-}
-
-.two-column button {
-}
-
 .social {
     display: flex;
     align-items: center;
@@ -28,8 +17,20 @@
     /* margin-left: 1rem; */
 }
 
+.center-contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.contact-columns > div {
+    padding-inline: 2rem;
+}
+
 @media screen and (width > 720px) {
-    .two-column {
+    .contact-columns {
+        display: grid;
         grid-template-columns: 1fr 1fr;
     }
 }

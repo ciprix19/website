@@ -1,0 +1,8 @@
+.transition-image {
+    opacity: 0;
+    transition: opacity 2s linear;
+}
+
+.start-transition {
+    opacity: 1;
+}

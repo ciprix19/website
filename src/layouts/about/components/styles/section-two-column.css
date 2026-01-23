@@ -1,0 +1,10 @@
+.two-column-header li {
+    padding-block: 0.5rem;
+    list-style: inside;
+    direction: ltr;
+}
+
+.two-column-header > h2 {
+    text-align: center;
+    padding-bottom: 3rem;
+}

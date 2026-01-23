@@ -12,8 +12,7 @@ export default function Header() {
     return (
         <header className="main-header">
             <div className="nav-wrapper wrapper">
-                {/* <img src='images/linkedin-64x64.jpg' alt='logo'></img> */}
-                <p>CB</p>
+                <img className="logo" src="images/logo.png" alt="logo"></img>
                 <button
                     className={`hamburger ${isMenuOpen ? 'active' : ''}`}
                     onClick={toggleMenu}
@@ -61,30 +60,6 @@ export default function Header() {
                                             className="icon social-media"
                                             src="images/icons/github.svg"
                                             alt="github"
-                                        ></img>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="https://www.instagram.com/cipri_.b/"
-                                        target="_blank"
-                                    >
-                                        <img
-                                            className="icon social-media"
-                                            src="images/icons/instagram.svg"
-                                            alt="instagram"
-                                        ></img>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="https://www.facebook.com/cipri.barbuta/"
-                                        target="_blank"
-                                    >
-                                        <img
-                                            className="icon social-media"
-                                            src="images/icons/facebook.svg"
-                                            alt="facebook"
                                         ></img>
                                     </a>
                                 </li>

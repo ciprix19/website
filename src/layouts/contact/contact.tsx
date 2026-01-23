@@ -29,7 +29,7 @@ export default function Contact() {
 
     return (
         <section id="contact">
-            <div className="wrapper">
+            <div className="wrapper center-contact">
                 <h2>Contact</h2>
                 {/* <div>
                     <h1>Contact</h1>
@@ -45,22 +45,27 @@ export default function Contact() {
                         <button className='button-card' onClick={e => handleSubmitButton(e)}>Submit</button>
                     </form>
                 </div> */}
-                <div className="socials-div">
-                    <h2>{`You can also find me on:`}</h2>
-                    {/* <SocialsDiv
-                        linkToPlatform='https://www.linkedin.com/in/ciprix19/'
-                        socialPlatform='Linkedin'/>
-                    <SocialsDiv
-                        linkToPlatform='https://github.com/ciprix19'
-                        socialPlatform='Github'/> */}
-                    <SocialsDiv
-                        linkToPlatform="https://www.instagram.com/cipri_.b/"
-                        socialPlatform="Instagram"
-                    />
-                    <SocialsDiv
-                        linkToPlatform="https://www.facebook.com/cipri.barbuta/"
-                        socialPlatform="Facebook"
-                    />
+                <div className="contact-columns">
+                    <div>
+                        <SocialsDiv
+                            linkToPlatform="https://www.linkedin.com/in/ciprix19/"
+                            socialPlatform="Linkedin"
+                        />
+                        <SocialsDiv
+                            linkToPlatform="https://github.com/ciprix19"
+                            socialPlatform="Github"
+                        />
+                    </div>
+                    <div>
+                        <SocialsDiv
+                            linkToPlatform="https://www.instagram.com/cipri_.b/"
+                            socialPlatform="Instagram"
+                        />
+                        <SocialsDiv
+                            linkToPlatform="https://www.facebook.com/cipri.barbuta/"
+                            socialPlatform="Facebook"
+                        />
+                    </div>
                 </div>
             </div>
         </section>

@@ -9,6 +9,10 @@
 .two-column-layout {
     display: grid;
     place-items: center;
+    gap: 5rem;
+}
+.reverse {
+    direction: rtl;
 }
 .three-column-layout {
     display: grid;

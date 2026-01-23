@@ -4,7 +4,7 @@ import WebView from './web-view/webview';
 export default function Resume() {
     return (
         <section id="resume">
-            <h1>Resume</h1>
+            <h2>Resume</h2>
             <section className="mode-buttons-section">
                 <div className="div-buttons">
                     <button className="button-card" disabled={true}>
@@ -16,7 +16,6 @@ export default function Resume() {
                         rel="noopener noreferrer"
                         target="_blank"
                     >
-                        {/* <button className='button-card'>Open PDF</button> */}
                         <span>Open PDF</span>
                     </a>
                 </div>

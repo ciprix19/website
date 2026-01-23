@@ -46,10 +46,10 @@ h1 {
     line-height: 1.1;
 }
 h2 {
-    font-size: 2rem;
+    font-size: 3.5rem;
 }
 h3 {
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 input,
 textarea {
@@ -76,6 +76,7 @@ a {
     font-weight: 500;
     color: var(--color-primary-text);
     text-decoration: inherit;
+    -webkit-tap-highlight-color: transparent !important;
 }
 a:hover {
     color: var(--color-accent);
@@ -94,10 +95,8 @@ button {
     cursor: pointer;
     transition: 0.3s;
 }
-button:hover {
-    background-color: var(--color-accent-strong);
-    background-color: var(--color-background-medium);
-    border-color: var(--color-border);
+button:active {
+    -webkit-tap-highlight-color: transparent !important;
 }
 button:disabled {
     background-color: var(--color-background-medium);
@@ -122,8 +121,14 @@ section:nth-of-type(2n) {
         padding: 5rem;
     }
 }
+@media screen and (width > 720px) {
+    button:hover {
+        background-color: var(--color-background-medium);
+        border-color: var(--color-border);
+    }
+}
 
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
     :root {
         color: #213547;
         background-color: #ffffff;
@@ -136,4 +141,4 @@ section:nth-of-type(2n) {
     button {
         background-color: #f9f9f9;
     }
-}
+} */

@@ -6,7 +6,6 @@ type SkillEntryType = {
     skillName: String;
 };
 
-// todo: drag and drop elements in the div
 const skillsCategories: Record<string, string[]> = {
     'Backend and Scripting': [
         'Node.js',

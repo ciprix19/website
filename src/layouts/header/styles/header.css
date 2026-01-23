@@ -46,6 +46,10 @@
     outline: 1px solid var(--color-border);
 }
 
+.logo {
+    padding: 0 1rem;
+    height: 2rem;
+}
 .socials {
     display: flex;
     align-items: center;
@@ -82,7 +86,6 @@
     .hamburger {
         display: none;
     }
-
     .nav-wrapper {
         flex-wrap: nowrap;
     }

@@ -15,27 +15,52 @@
     padding: 1rem;
 }
 
-.card-expand .expandable {
+.expandable {
+    display: grid;
+    opacity: 0;
+    grid-template-rows: 0fr;
+    transition:
+        grid-template-rows 0.8s linear,
+        opacity 0.8s linear;
+}
+
+.expandable > div {
+    overflow: hidden;
+    grid-row: 1 / span 2;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     border-top: 0.2rem var(--color-accent-strong) solid;
-    max-height: 0px;
-    transition:
-        max-height 1s linear,
-        padding-block 1s linear;
-    overflow: hidden;
     padding-inline: 2rem;
     padding-block: 0;
 }
-/* starting-style!!! */
-.card-expand .expandable.active {
-    max-height: 500px;
-    transition:
-        max-height 1s linear,
-        padding-block 1s linear;
-    padding: 2rem;
+.expandable.active {
+    grid-template-rows: 1fr;
+    opacity: 1;
 }
+
+/* .card-expand .expandable {
+    display: flex;
+    overflow: hidden;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border-top: 0.2rem var(--color-accent-strong) solid;
+    max-height: 0px;
+    height: 0;
+    opacity: 0;
+    transition:
+        opacity 1s linear,
+        max-height 1s linear,
+        height 1s linear,
+        padding-block 1s linear;
+    padding-inline: 2rem;
+    padding-block: 0;
+}
+.card-expand .expandable.active {
+    height: auto;
+    opacity: 1;
+    padding: 2rem;
+} */
 
 /* use auto for max-height */
 /* .card-expand .expandable {
@@ -68,7 +93,18 @@
     border-top-right-radius: 0;
     border-bottom-right-radius: 2rem;
     border-bottom-left-radius: 2rem;
-    /* in loc de overflow hidden in .card-expand .expandable */
-    /* z-index: 3; */
-    /* position: relative; */
+}
+
+.expand-button > img {
+    display: inline;
+    width: 100%;
+    max-height: 2rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: transform 1s ease;
+}
+
+.expand-button > img.open {
+    transform: rotate(-180deg);
 }

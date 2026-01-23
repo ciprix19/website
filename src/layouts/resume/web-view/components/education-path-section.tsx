@@ -44,7 +44,7 @@ function EducationEntry({
 
 export default function EducationSection() {
     return (
-        <DivHeader isWrapped={true} sectionTitle={'EDUCATIONAL PATH'}>
+        <DivHeader isWrapped={true} sectionTitle={'EDUCATION'}>
             <div className="card">
                 <EducationEntry
                     degree={`Master's Degree in Software Engineering`}

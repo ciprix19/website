@@ -6,7 +6,7 @@ export default function Landing() {
             <div className="profile-section">
                 <h1>Andrei Ciprian Barbuta</h1>
                 <br></br>
-                <h2>SOFTWARE DEVELOPER</h2>
+                <h2>SOFTWARE ENGINEER</h2>
                 <span>
                     <img
                         className="icon"

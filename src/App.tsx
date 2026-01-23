@@ -8,9 +8,6 @@ import Resume from './layouts/resume/resume';
 
 function App() {
     return (
-        // todo: linkedin si github doar sus
-        // svg edu and prof
-
         <>
             <Header />
             <main>

@@ -10,19 +10,25 @@ export default function CardButtonExpand({
     title,
     children,
 }: CardButtonExpandType) {
-    const [isOpen, setIsOpen] = useState(true);
+    const [isOpen, setIsOpen] = useState(
+        title === 'Backend and Scripting' ? true : false,
+    );
 
     return (
         <div className="card-expand">
             <h3>{title}</h3>
             <div className={`expandable ${isOpen ? 'active' : ''}`}>
-                {children}
+                <div>{children}</div>
             </div>
             <button
-                className="expand-button"
+                className={`expand-button`}
                 onClick={() => setIsOpen(!isOpen)}
             >
-                {isOpen ? '˄' : '˅'}
+                {' '}
+                <img
+                    className={isOpen ? 'open' : ''}
+                    src="images/icons/down-chevron.svg"
+                ></img>
             </button>
         </div>
     );

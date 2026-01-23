@@ -1,10 +1,33 @@
 footer {
     background-color: var(--color-background);
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
     border-top: 1px var(--color-border) solid;
-    padding: 2rem;
+    padding: 1rem;
+    color: var(--color-secondary-text);
+}
+
+footer a {
+    color: var(--color-primary-text);
+}
+/* footer a::before {
+    content: '↗';
+} */
+
+footer > p {
+    font-size: 0.8rem;
+    padding-top: 1rem;
+    text-align: center;
+}
+
+@media screen and (width > 720px) {
+    footer {
+        padding: 2rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    footer > p {
+        padding-top: 0;
+    }
 }
 
 /* footer > nav > ul {

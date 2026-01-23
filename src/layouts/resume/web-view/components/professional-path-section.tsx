@@ -38,7 +38,7 @@ function ProfessionalPathEntry({
 }
 export default function ProfessionalPathSection() {
     return (
-        <DivHeader isWrapped={true} sectionTitle={'PROFESSIONAL PATH'}>
+        <DivHeader isWrapped={true} sectionTitle={'CARRER PATH'}>
             <div className="card">
                 <ProfessionalPathEntry
                     position={'Cloud Engineer L1 - GCP'}
