@@ -11,7 +11,7 @@ export default function Footer() {
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    Raluca Mironiuc
+                    <u>Raluca Mironiuc</u>
                 </a>
                 .
             </p>
