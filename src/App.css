@@ -60,6 +60,10 @@
     opacity: 0.5;
 }
 
+#landing, #about, #contact, #resume {
+    scroll-margin-top: 6.1rem;
+}
+
 @media screen and (width > 720px) {
     #root {
         text-align: left;
