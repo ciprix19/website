@@ -20,8 +20,8 @@
     opacity: 0;
     grid-template-rows: 0fr;
     transition:
-        grid-template-rows 0.8s linear,
-        opacity 0.8s linear;
+        grid-template-rows 0.8s ease,
+        opacity 0.8s ease;
 }
 
 .expandable > div {
