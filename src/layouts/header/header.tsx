@@ -29,13 +29,13 @@ export default function Header() {
                         className={`nav-menu ${isMenuOpen ? 'active' : ''}`}
                     >
                         <li>
-                            <a href="#about">about</a>
+                            <a href="#about" onClick={toggleMenu}>about</a>
                         </li>
                         <li>
-                            <a href="#resume">resume</a>
+                            <a href="#resume" onClick={toggleMenu}>resume</a>
                         </li>
                         <li>
-                            <a href="#contact">contact</a>
+                            <a href="#contact" onClick={toggleMenu}>contact</a>
                         </li>
                         <li>
                             <ul className="socials">
