@@ -12,7 +12,7 @@ export default function Resume() {
                     </button>
                     <a
                         className="button-card"
-                        href="pdf/mycv.pdf"
+                        href="pdf/Andrei-Ciprian_Barbuta_Resume.pdf"
                         rel="noopener noreferrer"
                         target="_blank"
                     >
