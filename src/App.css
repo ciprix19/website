@@ -61,12 +61,16 @@
 }
 
 #landing, #about, #contact, #resume {
-    scroll-margin-top: 6.1rem;
+    scroll-margin-top: 20.5rem;
 }
 
 @media screen and (width > 720px) {
     #root {
         text-align: left;
+    }
+
+    #landing, #about, #contact, #resume {
+        scroll-margin-top: 6.1rem;
     }
 
     .two-column-layout {
