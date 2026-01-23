@@ -3,7 +3,7 @@ import WebView from './web-view/webview';
 
 export default function Resume() {
     return (
-        <section id="resume">
+        <section id='resume'>
             <h2>Resume</h2>
             <section className="mode-buttons-section">
                 <div className="div-buttons">

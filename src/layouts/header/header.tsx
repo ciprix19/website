@@ -12,7 +12,11 @@ export default function Header() {
     return (
         <header className="main-header">
             <div className="nav-wrapper wrapper">
-                <a href='#landing'><img className='logo' src='images/logo.png' alt='logo' /></a>
+                <a href='#landing'><img className='logo' src='images/logo.png' alt='logo' onClick={() => {
+                    if (isMenuOpen) {
+                        toggleMenu();
+                    }
+                }}/></a>
                 <button
                     className={`hamburger ${isMenuOpen ? 'active' : ''}`}
                     onClick={toggleMenu}
