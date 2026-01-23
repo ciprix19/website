@@ -2,7 +2,7 @@ import './styles/landing.css';
 
 export default function Landing() {
     return (
-        <section>
+        <section id='landing'>
             <div className="profile-section">
                 <h1>Andrei Ciprian Barbuta</h1>
                 <br></br>

@@ -12,7 +12,7 @@ export default function Header() {
     return (
         <header className="main-header">
             <div className="nav-wrapper wrapper">
-                <img className="logo" src="images/logo.png" alt="logo"></img>
+                <a href='#landing'><img className='logo' src='images/logo.png' alt='logo' /></a>
                 <button
                     className={`hamburger ${isMenuOpen ? 'active' : ''}`}
                     onClick={toggleMenu}
