@@ -12,7 +12,7 @@ export default function About() {
             <SectionTwoColumnHeader sectionTitle={'About'}>
                 <ListAndHeader
                     sectionSubTitle={
-                        'Im a software developer based in Bucharest, Romania'
+                        'I am a software developer based in Bucharest, Romania'
                     }
                     list={[
                         `I enjoy turning ideas into reality, solving complex
