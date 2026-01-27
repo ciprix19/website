@@ -57,7 +57,7 @@ export default function ProfessionalPathSection() {
                     location={'Cluj-Napoca, Romania'}
                     imgSource={'/icons/web-dev.svg'}
                     startDate={'August 2022'}
-                    endDate={'September 2022'}
+                    endDate={'November 2022'}
                     description={
                         'Participated in the design and development of a secure, Angular-based frontend application for API key management.'
                     }

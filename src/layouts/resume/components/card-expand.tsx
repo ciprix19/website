@@ -11,7 +11,7 @@ export default function CardButtonExpand({
     children,
 }: CardButtonExpandType) {
     const [isOpen, setIsOpen] = useState(
-        title === 'Backend and Scripting' ? true : false,
+        title === 'Backend and Scripting' || title === 'Frontend Technologies' ? true : false,
     );
 
     return (
