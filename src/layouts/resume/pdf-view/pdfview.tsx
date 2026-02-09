@@ -10,7 +10,7 @@ export default function PdfView() {
                 <CardButtonExpand title={'Resume'}>
                     <iframe
                         className="resume-viewer"
-                        src="pdf/mycv.pdf"
+                        src="pdf/Andrei-Ciprian_Barbuta_Resume.pdf"
                     ></iframe>
                 </CardButtonExpand>
             </SectionHeader>
