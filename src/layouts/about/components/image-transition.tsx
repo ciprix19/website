@@ -7,24 +7,25 @@ type ImageType = {
 };
 
 export default function ImageTransition({ img }: { img: ImageType }) {
-    const myRef = useRef(null);
+    const myRef = useRef<HTMLImageElement | null>(null);
     const [isVisible, setIsVisible] = useState(false);
-    const options = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 1.0,
-    };
 
     useEffect(() => {
+        const options = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 1.0,
+        };
         const observer = new IntersectionObserver((entries) => {
             const entry = entries[0];
             setIsVisible(entry.isIntersecting);
-        });
-        if (myRef.current) observer.observe(myRef.current);
+        }, options);
+        const currentElement = myRef.current;
+        if (currentElement) observer.observe(currentElement);
         return () => {
-            if (myRef.current) observer.unobserve(myRef.current);
+            if (currentElement) observer.unobserve(currentElement);
         };
-    }, [myRef, options]);
+    }, [myRef]);
 
     return (
         <img

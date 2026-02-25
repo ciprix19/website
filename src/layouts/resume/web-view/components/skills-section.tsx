@@ -3,7 +3,7 @@ import './styles/skills-section.css';
 import CardButtonExpand from '../../components/card-expand';
 
 type SkillEntryType = {
-    skillName: String;
+    skillName: string;
 };
 
 const skillsCategories: Record<string, string[]> = {

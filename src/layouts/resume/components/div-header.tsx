@@ -1,9 +1,10 @@
+import type { ReactNode } from 'react';
 import './styles/div-header.css';
 
 type DivHeaderType = {
     isWrapped: boolean;
     sectionTitle: string;
-    children: any;
+    children: ReactNode;
 };
 export default function DivHeader({
     isWrapped,

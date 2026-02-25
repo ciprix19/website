@@ -1,13 +1,13 @@
 import DivHeader from '../../components/div-header';
 
 type ProfessionalPathEntryType = {
-    position: String;
-    company: String;
-    location: String;
-    imgSource: String;
-    startDate: String;
-    endDate: String;
-    description: String;
+    position: string;
+    company: string;
+    location: string;
+    imgSource: string;
+    startDate: string;
+    endDate: string;
+    description: string;
 };
 function ProfessionalPathEntry({
     position,

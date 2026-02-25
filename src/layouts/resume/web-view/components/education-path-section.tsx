@@ -2,14 +2,14 @@ import DivHeader from '../../components/div-header';
 import './styles/education-path-section.css';
 
 type EducationEntryType = {
-    degree: String;
-    institution: String;
-    location: String;
-    imgSource: String;
-    startDate: String;
-    endDate: String;
-    relevantCoursework: String;
-    thesis: String;
+    degree: string;
+    institution: string;
+    location: string;
+    imgSource: string;
+    startDate: string;
+    endDate: string;
+    relevantCoursework: string;
+    thesis: string;
 };
 
 function EducationEntry({
