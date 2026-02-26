@@ -32,7 +32,7 @@ const skillsCategories: Record<string, string[]> = {
         'Kubernetes',
         'Docker',
     ],
-    Tools: ['Git', 'Linux'],
+    Tools: ['Git', 'Linux', 'Docker', 'Github Actions'],
 };
 
 function SkillsEntry({ skillName }: SkillEntryType) {
