@@ -41,7 +41,7 @@ export default function ProfessionalPathSection() {
         <DivHeader isWrapped={true} sectionTitle={'CARRER PATH'}>
             <div className="card">
                 <ProfessionalPathEntry
-                    position={'Cloud Engineer L1 - GCP'}
+                    position={'Fullstack Developer'}
                     company={'Arkoudsoft SRL'}
                     location={'Cluj-Napoca, Romania'}
                     imgSource={'/icons/web-dev.svg'}
