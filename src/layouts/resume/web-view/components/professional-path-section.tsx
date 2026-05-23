@@ -44,6 +44,17 @@ export default function ProfessionalPathSection() {
                     position={'Cloud Engineer L1 - GCP'}
                     company={'Cognizant Softvision'}
                     location={'Bucharest, Romania'}
+                    imgSource={'/icons/web-dev.svg'}
+                    startDate={'April 2026'}
+                    endDate={'present'}
+                    description={
+                        'Currently involved in the design and implementation of a web application.'
+                    }
+                />
+                <ProfessionalPathEntry
+                    position={'Cloud Engineer L1 - GCP'}
+                    company={'Cognizant Softvision'}
+                    location={'Bucharest, Romania'}
                     imgSource={'/icons/cloud.svg'}
                     startDate={'May 2024'}
                     endDate={'September 2025'}
