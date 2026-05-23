@@ -42,8 +42,8 @@ export default function ProfessionalPathSection() {
             <div className="card">
                 <ProfessionalPathEntry
                     position={'Cloud Engineer L1 - GCP'}
-                    company={'Cognizant Softvision'}
-                    location={'Bucharest, Romania'}
+                    company={'Arkoudsoft SRL'}
+                    location={'Cluj-Napoca, Romania'}
                     imgSource={'/icons/web-dev.svg'}
                     startDate={'April 2026'}
                     endDate={'present'}
