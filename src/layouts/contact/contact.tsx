@@ -30,7 +30,6 @@ export default function Contact() {
     return (
         <section id="contact">
             <div className="wrapper center-contact">
-                <h2>Contact</h2>
                 {/* <div>
                     <h1>Contact</h1>
                     <form className='contact-form'>
@@ -46,6 +45,7 @@ export default function Contact() {
                     </form>
                 </div> */}
                 <div className="contact-columns">
+                    <h2>Contact</h2>
                     <div>
                         <SocialsDiv
                             linkToPlatform="https://www.linkedin.com/in/ciprix19/"
@@ -55,12 +55,10 @@ export default function Contact() {
                             linkToPlatform="https://github.com/ciprix19"
                             socialPlatform="Github"
                         />
-                    </div>
-                    <div>
-                        <SocialsDiv
+                        {/* <SocialsDiv
                             linkToPlatform="https://www.instagram.com/cipri_.b/"
                             socialPlatform="Instagram"
-                        />
+                        /> */}
                         <SocialsDiv
                             linkToPlatform="https://www.facebook.com/cipri.barbuta/"
                             socialPlatform="Facebook"

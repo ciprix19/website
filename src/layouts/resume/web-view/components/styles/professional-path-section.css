@@ -1,0 +1,11 @@
+.technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    .tech-items {
+        border: 2px solid var(--color-background-light);
+        border-radius: 10px;
+        padding: 2px 6px;
+    }
+}

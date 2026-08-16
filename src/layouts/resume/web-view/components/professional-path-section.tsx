@@ -1,4 +1,21 @@
 import DivHeader from '../../components/div-header';
+import './styles/professional-path-section.css'
+
+type TechnologiesProps = {
+    items: string[]
+}
+
+function Technologies({ items }: TechnologiesProps) {
+    return (
+        <ul className='technologies'>
+            {items.map(item =>
+                <li className='tech-items'>
+                    {item}
+                </li>
+            )}
+        </ul>
+    )
+}
 
 type ProfessionalPathEntryType = {
     position: string;
@@ -8,6 +25,7 @@ type ProfessionalPathEntryType = {
     startDate: string;
     endDate: string;
     description: string;
+    technologies: string[];
 };
 function ProfessionalPathEntry({
     position,
@@ -17,6 +35,7 @@ function ProfessionalPathEntry({
     startDate,
     endDate,
     description,
+    technologies
 }: ProfessionalPathEntryType) {
     return (
         <div className="card-entry">
@@ -26,12 +45,14 @@ function ProfessionalPathEntry({
             <div>
                 <h3>{position}</h3>
                 <p>{company}</p>
-                <p>{location}</p>
+                <p><i>{location}</i></p>
                 <p>
                     {startDate} - {endDate}
                 </p>
-                <br></br>
+                <br />
                 <p>{description}</p>
+                <br />
+                <Technologies items={technologies}/>
             </div>
         </div>
     );
@@ -41,15 +62,16 @@ export default function ProfessionalPathSection() {
         <DivHeader isWrapped={true} sectionTitle={'CARRER PATH'}>
             <div className="card">
                 <ProfessionalPathEntry
-                    position={'Fullstack Developer'}
+                    position={'Software Developer'}
                     company={'Arkoudsoft SRL'}
                     location={'Cluj-Napoca, Romania'}
                     imgSource={'/icons/web-dev.svg'}
                     startDate={'April 2026'}
-                    endDate={'present'}
+                    endDate={'June 2026'}
                     description={
-                        'Currently involved in the design and implementation of a web application.'
+                        'Contributed to the design and development of a cross-platform web and mobile festival application.'
                     }
+                    technologies={['Tauri', 'React', 'TypeScript', 'Node.js', 'Express.js', 'IndexedDB', 'PostgreSQL', 'Supabase', 'Docker', 'Git', 'HTML5', 'CSS3']}
                 />
                 <ProfessionalPathEntry
                     position={'Cloud Engineer L1 - GCP'}
@@ -61,6 +83,7 @@ export default function ProfessionalPathSection() {
                     description={
                         'Provided advanced technical support on over 200 tickets for Apigee X and Apigee Hybrid platforms across both production and development environments.'
                     }
+                    technologies={['Apigee X', 'Apigee Hybrid', 'Google Cloud Platform', 'Kubernetes', 'IAM', 'Cloud Logging', 'Cloud Monitoring', 'Google Cloud Networking', 'VPCs', 'HTTP(S) Load Balancers', 'Terraform Modules Apigee']}
                 />
                 <ProfessionalPathEntry
                     position={'Frontend Developer Intern'}
@@ -72,6 +95,7 @@ export default function ProfessionalPathSection() {
                     description={
                         'Participated in the design and development of a secure, Angular-based frontend application for API key management.'
                     }
+                    technologies={['TypeScript', 'HTML5', 'CSS3', 'Angular', 'REST APIs', 'Docker']}
                 />
             </div>
         </DivHeader>
