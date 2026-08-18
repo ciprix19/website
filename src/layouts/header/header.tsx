@@ -1,20 +1,19 @@
-import './styles/header.css';
-import { useRef, useState } from 'react';
+import './styles/header.css'
+import { useRef, useState } from 'react'
 
-export default function Header() {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const ref = useRef<HTMLUListElement>(null);
+export const Header = () => {
+    const [isMenuOpen, setIsMenuOpen] = useState(false)
+    const ref = useRef<HTMLUListElement>(null)
 
-    function toggleMenu() {
-        setIsMenuOpen(!isMenuOpen);
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen)
     }
-
     return (
         <header className="main-header">
             <div className="nav-wrapper wrapper">
                 <a href='#landing'><img className='logo' src='images/logos/logo5.svg' alt='logo' onClick={() => {
                     if (isMenuOpen) {
-                        toggleMenu();
+                        toggleMenu()
                     }
                 }}/></a>
                 <button
@@ -46,7 +45,7 @@ export default function Header() {
                                 <li>
                                     <a
                                         href="https://www.linkedin.com/in/ciprix19/"
-                                        target="_blank"
+                                        target="_blank" rel="noreferrer"
                                     >
                                         <img
                                             className="icon social-media"
@@ -58,7 +57,7 @@ export default function Header() {
                                 <li>
                                     <a
                                         href="https://github.com/ciprix19"
-                                        target="_blank"
+                                        target="_blank" rel="noreferrer"
                                     >
                                         <img
                                             className="icon social-media"
@@ -73,5 +72,5 @@ export default function Header() {
                 </nav>
             </div>
         </header>
-    );
+    )
 }

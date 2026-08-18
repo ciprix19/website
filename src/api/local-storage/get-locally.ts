@@ -4,6 +4,7 @@ export const getLocally = (key: string) => {
         try {
             return JSON.parse(rawData)
         } catch (e) {
+            console.error(e)
             localStorage.removeItem(key)
         }
     }

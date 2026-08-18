@@ -1,12 +1,12 @@
-import ImageTransition from './components/image-transition';
-import './styles/about.css';
-import ListAndHeader from './components/list-header';
+import { ImageTransition } from './components/image-transition'
+import './styles/about.css'
+import { ListAndHeader } from './components/list-header'
 import {
     SectionTwoColumn,
     SectionTwoColumnHeader,
-} from './components/section-two-column';
+} from './components/section-two-column'
 
-export default function About() {
+export const About = () => {
     return (
         <>
             <SectionTwoColumnHeader sectionTitle={'About'}>
@@ -65,5 +65,5 @@ export default function About() {
                 />
             </SectionTwoColumn>
         </>
-    );
+    )
 }

@@ -11,7 +11,7 @@ export const getVisits = async ()  => {
         numberOfVisits = +getLocally('visitsCount')
         console.log('cache')
     } else {
-        let visitsObject = await readBackendNumberOfVisits()
+        const visitsObject = await readBackendNumberOfVisits()
 
         if (!visitsObject) {
             numberOfVisits = +getLocally('visitsCount')
@@ -25,9 +25,7 @@ export const getVisits = async ()  => {
     if (numberOfVisits) {
         localStorage.setItem('visitsCount', `${numberOfVisits}`)
         localStorage.setItem('lastGetVisitCount', JSON.stringify(Date.now()))
-    }
-
-    return numberOfVisits
+    }    return numberOfVisits
 }
 
 export const incrementVisits = async () => {

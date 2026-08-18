@@ -1,10 +1,10 @@
-import DivHeader from '../../components/div-header';
-import './styles/skills-section.css';
-import CardButtonExpand from '../../components/card-expand';
+import { DivHeader } from '../../components/div-header'
+import './styles/skills-section.css'
+import { CardButtonExpand } from '../../components/card-expand'
 
 type SkillEntryType = {
-    skillName: string;
-};
+    skillName: string
+}
 
 const skillsCategories: Record<string, string[]> = {
     'Backend and Scripting': [
@@ -32,35 +32,35 @@ const skillsCategories: Record<string, string[]> = {
         'Kubernetes',
         'Docker',
     ],
-    Tools: ['Git', 'Linux', 'Docker', 'Github Actions', 'Terraform'],
-};
-
-function SkillsEntry({ skillName }: SkillEntryType) {
-    return <div className="card-simple">{skillName}</div>;
+    Tools: ['Git', 'Linux', 'Docker', 'Github Actions', 'Terraform']
 }
 
-function SkillsForCategory({ category }: { category: string }) {
+const SkillsEntry = ({ skillName }: SkillEntryType) => {
+    return <div className="card-simple">{skillName}</div>
+}
+
+const SkillsForCategory = ({ category }: { category: string }) => {
     return (
         <CardButtonExpand title={category}>
             {skillsCategories[category].map((skill) => {
                 return (
                     <SkillsEntry key={skill} skillName={skill}></SkillsEntry>
-                );
+                )
             })}
         </CardButtonExpand>
-    );
+    )
 }
 
-export default function SkillsCategoryDisplay() {
+export const SkillsCategoryDisplay = () => {
     return (
         <DivHeader isWrapped={true} sectionTitle={'CORE ARSENAL'}>
             <div className="skills-category-section">
                 {Object.keys(skillsCategories).map((category) => {
                     return (
                         <SkillsForCategory key={category} category={category} />
-                    );
+                    )
                 })}
             </div>
         </DivHeader>
-    );
+    )
 }

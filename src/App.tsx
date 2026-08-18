@@ -1,12 +1,12 @@
-import './App.css';
-import Header from './layouts/header/header';
-import Footer from './layouts/footer/footer';
-import Landing from './layouts/landing/landing';
-import About from './layouts/about/about';
-import Contact from './layouts/contact/contact';
-import Resume from './layouts/resume/resume';
+import './App.css'
+import { Header } from './layouts/header/header'
+import { Footer } from './layouts/footer/footer'
+import { Landing } from './layouts/landing/landing'
+import { About } from './layouts/about/about'
+import { Contact } from './layouts/contact/contact'
+import { Resume } from './layouts/resume/resume'
 
-function App() {
+const App = () => {
     return (
         <>
             <Header />
@@ -18,7 +18,7 @@ function App() {
             </main>
             <Footer />
         </>
-    );
+    )
 }
 
-export default App;
+export default App

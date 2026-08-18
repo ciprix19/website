@@ -1,6 +1,6 @@
-import './styles/not-found.css';
+import './styles/not-found.css'
 
-export default function NotFound() {
+export const NotFound = () => {
     return (
         <main className="not-found">
             <section>
@@ -17,5 +17,5 @@ export default function NotFound() {
                 </p>
             </section>
         </main>
-    );
+    )
 }

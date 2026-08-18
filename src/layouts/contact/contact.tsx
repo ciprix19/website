@@ -1,14 +1,14 @@
 // import type { MouseEvent } from 'react';
-import './styles/contact.css';
+import './styles/contact.css'
 
 type SocialsDivType = {
-    socialPlatform: string;
-    linkToPlatform: string;
-};
-function SocialsDiv({ socialPlatform, linkToPlatform }: SocialsDivType) {
+    socialPlatform: string
+    linkToPlatform: string
+}
+const SocialsDiv = ({ socialPlatform, linkToPlatform }: SocialsDivType) => {
     return (
         <div className="social-platform-div">
-            <a href={linkToPlatform} target="_blank">
+            <a href={linkToPlatform} target="_blank" rel="noreferrer">
                 <div className="social">
                     <img
                         className="icon social-media"
@@ -19,10 +19,10 @@ function SocialsDiv({ socialPlatform, linkToPlatform }: SocialsDivType) {
                 </div>
             </a>
         </div>
-    );
+    )
 }
 
-export default function Contact() {
+export const Contact = () => {
     // function handleSubmitButton(e: MouseEvent<HTMLButtonElement>) {
     //     e.preventDefault();
     // }
@@ -67,5 +67,5 @@ export default function Contact() {
                 </div>
             </div>
         </section>
-    );
+    )
 }
