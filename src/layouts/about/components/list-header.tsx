@@ -1,11 +1,9 @@
 type ListAndHeaderType = {
-    sectionSubTitle: string;
-    list: Array<string>;
-};
-export default function ListAndHeader({
-    sectionSubTitle,
-    list,
-}: ListAndHeaderType) {
+    sectionSubTitle: string
+    list: Array<string>
+}
+export const ListAndHeader = ({ sectionSubTitle,
+    list, }: ListAndHeaderType) => {
     return (
         <div>
             {sectionSubTitle && <h3>{sectionSubTitle}</h3>}
@@ -16,5 +14,5 @@ export default function ListAndHeader({
                 ))}
             </ul>
         </div>
-    );
+    )
 }

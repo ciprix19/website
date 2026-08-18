@@ -1,5 +1,5 @@
-import DivHeader from '../../components/div-header';
-import './styles/education-path-section.css';
+import { DivHeader } from '../../components/div-header'
+import './styles/education-path-section.css'
 
 type EducationEntryType = {
     degree: string;
@@ -12,16 +12,14 @@ type EducationEntryType = {
     thesis: string;
 };
 
-function EducationEntry({
-    degree,
+const EducationEntry = ({ degree,
     institution,
     location,
     imgSource,
     startDate,
     endDate,
     relevantCoursework,
-    thesis,
-}: EducationEntryType) {
+    thesis, }: EducationEntryType) => {
     return (
         <div className="card-entry">
             <div className="icon-column">
@@ -39,10 +37,10 @@ function EducationEntry({
                 <p>{thesis}</p>
             </div>
         </div>
-    );
+    )
 }
 
-export default function EducationSection() {
+export const EducationPathSection = () => {
     return (
         <DivHeader isWrapped={true} sectionTitle={'EDUCATION'}>
             <div className="card">
@@ -78,5 +76,5 @@ export default function EducationSection() {
                 />
             </div>
         </DivHeader>
-    );
+    )
 }

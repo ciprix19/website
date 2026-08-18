@@ -1,7 +1,7 @@
-import './styles/resume.css';
-import WebView from './web-view/webview';
+import './styles/resume.css'
+import { WebView } from './web-view/webview'
 
-export default function Resume() {
+export const Resume = () => {
     return (
         <section id='resume'>
             <h2>Resume</h2>
@@ -22,5 +22,5 @@ export default function Resume() {
             </section>
             <WebView />
         </section>
-    );
+    )
 }

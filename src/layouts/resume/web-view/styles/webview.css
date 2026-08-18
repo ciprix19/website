@@ -28,9 +28,15 @@
 
 .card-entry {
     display: flex;
-    padding: 1rem;
+    /* padding: 1rem; */
     text-align: start;
 }
 .card-entry > div {
     padding: 1rem;
+}
+
+@media screen and (min-width: 380px) {
+    .card-entry {
+        padding: 1rem;
+    }
 }

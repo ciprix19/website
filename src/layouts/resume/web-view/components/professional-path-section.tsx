@@ -1,18 +1,16 @@
-import DivHeader from '../../components/div-header';
+import { DivHeader } from '../../components/div-header'
 import './styles/professional-path-section.css'
 
 type TechnologiesProps = {
     items: string[]
 }
 
-function Technologies({ items }: TechnologiesProps) {
+const Technologies = ({ items }: TechnologiesProps) => {
     return (
         <ul className='technologies'>
-            {items.map(item =>
-                <li className='tech-items'>
-                    {item}
-                </li>
-            )}
+            {items.map(item => <li key={item} className='tech-items'>
+                {item}
+            </li>)}
         </ul>
     )
 }
@@ -27,16 +25,14 @@ type ProfessionalPathEntryType = {
     description: string;
     technologies: string[];
 };
-function ProfessionalPathEntry({
-    position,
+const ProfessionalPathEntry = ({ position,
     company,
     location,
     imgSource,
     startDate,
     endDate,
     description,
-    technologies
-}: ProfessionalPathEntryType) {
+    technologies }: ProfessionalPathEntryType) => {
     return (
         <div className="card-entry">
             <div className="icon-column">
@@ -55,9 +51,9 @@ function ProfessionalPathEntry({
                 <Technologies items={technologies}/>
             </div>
         </div>
-    );
+    )
 }
-export default function ProfessionalPathSection() {
+export const ProfessionalPathSection = () => {
     return (
         <DivHeader isWrapped={true} sectionTitle={'CARRER PATH'}>
             <div className="card">
@@ -99,5 +95,5 @@ export default function ProfessionalPathSection() {
                 />
             </div>
         </DivHeader>
-    );
+    )
 }

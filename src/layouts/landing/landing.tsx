@@ -1,6 +1,6 @@
-import './styles/landing.css';
+import './styles/landing.css'
 
-export default function Landing() {
+export const Landing = () => {
     return (
         <section id='landing'>
             <div className="profile-section">
@@ -17,5 +17,5 @@ export default function Landing() {
                 </span>
             </div>
         </section>
-    );
+    )
 }

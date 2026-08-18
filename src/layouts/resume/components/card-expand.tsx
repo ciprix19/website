@@ -1,19 +1,14 @@
-import { useState, type ReactNode } from 'react';
-import './styles/card-expand.css';
+import { useState, type ReactNode } from 'react'
+import './styles/card-expand.css'
 
 type CardButtonExpandType = {
-    title: string;
-    children: ReactNode;
-};
+    title: string
+    children: ReactNode
+}
 //todo: remove max-height from the card-expand and implement dynamic height computation
-export default function CardButtonExpand({
-    title,
-    children,
-}: CardButtonExpandType) {
-    const [isOpen, setIsOpen] = useState(
-        title === 'Backend and Scripting' || title === 'Frontend Technologies' ? true : false,
-    );
-
+export const CardButtonExpand = ({ title,
+    children, }: CardButtonExpandType) => {
+    const [isOpen, setIsOpen] = useState(title === 'Backend and Scripting' || title === 'Frontend Technologies' ? true : false,)
     return (
         <div className="card-expand">
             <h3>{title}</h3>
@@ -31,5 +26,5 @@ export default function CardButtonExpand({
                 ></img>
             </button>
         </div>
-    );
+    )
 }
