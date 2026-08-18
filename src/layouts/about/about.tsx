@@ -23,7 +23,7 @@ export const About = () => {
                 />
                 <ImageTransition
                     img={{
-                        source: 'images/leme6.jpg',
+                        source: '/images/leme6.jpg',
                         alt: 'image-of-me-self',
                     }}
                 />
@@ -41,7 +41,7 @@ export const About = () => {
                 />
                 <ImageTransition
                     img={{
-                        source: 'images/area-of-expertise.jpg',
+                        source: '/images/area-of-expertise.jpg',
                         alt: 'expertise-image',
                     }}
                 />
@@ -59,7 +59,7 @@ export const About = () => {
                 />
                 <ImageTransition
                     img={{
-                        source: 'images/guitar.jpg',
+                        source: '/images/guitar.jpg',
                         alt: 'facts-image',
                     }}
                 />

@@ -6,7 +6,7 @@ export const NotFound = () => {
             <section>
                 <h1>not found.</h1>
                 <br></br>
-                <img src="images/business-cat-small.jpg"></img>
+                <img src="/images/business-cat-small.jpg"></img>
                 <br></br>
                 <p>
                     Sorry, the page you are looking for does not exist.{' '}

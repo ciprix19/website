@@ -10,7 +10,7 @@ export const Landing = () => {
                 <span>
                     <img
                         className="icon"
-                        src="images/icons/location.svg"
+                        src="/images/icons/location.svg"
                         alt="location"
                     ></img>
                     Bucharest, Romania

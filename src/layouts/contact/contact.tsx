@@ -12,7 +12,7 @@ const SocialsDiv = ({ socialPlatform, linkToPlatform }: SocialsDivType) => {
                 <div className="social">
                     <img
                         className="icon social-media"
-                        src={`images/icons/${socialPlatform.toLowerCase()}.svg`}
+                        src={`/images/icons/${socialPlatform.toLowerCase()}.svg`}
                         alt="facebook"
                     ></img>
                     <label>{socialPlatform}</label>

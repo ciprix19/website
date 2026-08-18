@@ -11,7 +11,7 @@ export const Header = () => {
     return (
         <header className="main-header">
             <div className="nav-wrapper wrapper">
-                <a href='#landing'><img className='logo' src='images/logos/logo5.svg' alt='logo' onClick={() => {
+                <a href='#landing'><img className='logo' src='/images/logos/logo5.svg' alt='logo' onClick={() => {
                     if (isMenuOpen) {
                         toggleMenu()
                     }
@@ -49,7 +49,7 @@ export const Header = () => {
                                     >
                                         <img
                                             className="icon social-media"
-                                            src="images/icons/linkedin.svg"
+                                            src="/images/icons/linkedin.svg"
                                             alt="linkedin"
                                         ></img>
                                     </a>
@@ -61,7 +61,7 @@ export const Header = () => {
                                     >
                                         <img
                                             className="icon social-media"
-                                            src="images/icons/github.svg"
+                                            src="/images/icons/github.svg"
                                             alt="github"
                                         ></img>
                                     </a>

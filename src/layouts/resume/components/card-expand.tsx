@@ -22,7 +22,7 @@ export const CardButtonExpand = ({ title,
                 {' '}
                 <img
                     className={isOpen ? 'open' : ''}
-                    src="images/icons/down-chevron.svg"
+                    src="/images/icons/down-chevron.svg"
                 ></img>
             </button>
         </div>

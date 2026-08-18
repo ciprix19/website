@@ -36,7 +36,7 @@ const ProfessionalPathEntry = ({ position,
     return (
         <div className="card-entry">
             <div className="icon-column">
-                <img className="icon" src={`images/${imgSource}`} alt="job" />
+                <img className="icon" src={`/images/${imgSource}`} alt="job" />
             </div>
             <div>
                 <h3>{position}</h3>

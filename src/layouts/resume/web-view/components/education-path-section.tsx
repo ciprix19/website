@@ -23,7 +23,7 @@ const EducationEntry = ({ degree,
     return (
         <div className="card-entry">
             <div className="icon-column">
-                <img className="icon" src={`images/${imgSource}`} alt="job" />
+                <img className="icon" src={`/images/${imgSource}`} alt="job" />
             </div>
             <div>
                 <h3>{degree}</h3>
