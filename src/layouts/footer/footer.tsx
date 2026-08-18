@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import './styles/footer.css';
-import { getVisits } from '../../logic/visits';
+import { getVisits, incrementVisits } from '../../logic/visits';
 
 export default function Footer() {
     const [visitsCount, setVisitsCount] = useState<number | null>(null)
@@ -15,7 +15,11 @@ export default function Footer() {
     }
 
     useEffect(() => {
-        fetchVisits()
+        const initVisits = async () => {
+            await incrementVisits()
+            await fetchVisits()
+        }
+        initVisits()
     }, [])
 
     return (

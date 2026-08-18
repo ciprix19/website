@@ -13,3 +13,14 @@ export const readBackendNumberOfVisits = async (): Promise<VisitType | null> => 
         return null
     }
 }
+
+export const incrementBackendVisits = async (): Promise<boolean | null> => {
+    try {
+        const response = await fetch(`${AWS_BACKEND_URL}`, {
+            method: 'POST'
+        })
+        return response.ok
+    } catch (e) {
+        return null
+    }
+}

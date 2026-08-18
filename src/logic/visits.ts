@@ -1,4 +1,4 @@
-import { readBackendNumberOfVisits } from "../api/backend/numberOfVisits"
+import { incrementBackendVisits, readBackendNumberOfVisits } from "../api/backend/visits"
 import { getLocally } from "../api/local-storage/get-locally"
 import { CACHE_TIME } from "../utils/constants"
 
@@ -8,13 +8,13 @@ export const getVisits = async ()  => {
 
     let numberOfVisits: number
     if (hasFreshCache) {
-        numberOfVisits = getLocally('visitsCount')
+        numberOfVisits = +getLocally('visitsCount')
         console.log('cache')
     } else {
         let visitsObject = await readBackendNumberOfVisits()
 
         if (!visitsObject) {
-            numberOfVisits = getLocally('visitsCount')
+            numberOfVisits = +getLocally('visitsCount')
             console.log('cache')
         } else {
             numberOfVisits = visitsObject.count
@@ -28,4 +28,20 @@ export const getVisits = async ()  => {
     }
 
     return numberOfVisits
+}
+
+export const incrementVisits = async () => {
+    const alreadyCounted = sessionStorage.getItem('visit-counted')
+
+    if (alreadyCounted) return
+
+    sessionStorage.setItem('visit-counted', 'true')
+
+    try {
+        await incrementBackendVisits()
+        localStorage.removeItem('lastGetVisitCount')
+    } catch (e) {
+        sessionStorage.removeItem('visit-counted')
+        throw e
+    }
 }
