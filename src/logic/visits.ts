@@ -25,21 +25,22 @@ export const getVisits = async ()  => {
     if (numberOfVisits) {
         localStorage.setItem('visitsCount', `${numberOfVisits}`)
         localStorage.setItem('lastGetVisitCount', JSON.stringify(Date.now()))
-    }    return numberOfVisits
+    }
+    return numberOfVisits
 }
 
 export const incrementVisits = async () => {
-    const alreadyCounted = sessionStorage.getItem('visit-counted')
+    const alreadyCounted = localStorage.getItem('visit-counted')
 
     if (alreadyCounted) return
 
-    sessionStorage.setItem('visit-counted', 'true')
+    localStorage.setItem('visit-counted', 'true')
 
     try {
         await incrementBackendVisits()
         localStorage.removeItem('lastGetVisitCount')
     } catch (e) {
-        sessionStorage.removeItem('visit-counted')
+        localStorage.removeItem('visit-counted')
         throw e
     }
 }
