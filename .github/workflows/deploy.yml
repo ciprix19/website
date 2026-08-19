@@ -54,11 +54,16 @@ jobs:
             --document-name "AWS-RunShellScript" \
             --parameters "commands=[
               \"aws ecr get-login-password --region $AWS_REGION | docker login --username AWS --password-stdin $REGISTRY\",
-              \"cd /home/ec2-user/website\",
-              \"IMAGE=$IMAGE docker compose pull\",
-              \"IMAGE=$IMAGE docker compose up -d\",
+              \"docker pull $IMAGE\",
+              \"docker rm -f website || true\",
+              \"docker run -d --name website -p 443:8443 -v /home/ec2-user/ssl:/etc/nginx/ssl:ro $IMAGE"\
             ]"
 
 # \"docker pull $REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG\",
 # \"docker rm -f website || true\",
 # \"docker run -d --name website -p 443:8443 -v /home/ec2-user/ssl:/etc/nginx/ssl:ro $REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG\"
+
+
+# \"cd /home/ec2-user/website\",
+# \"IMAGE=$IMAGE docker compose pull\",
+# \"IMAGE=$IMAGE docker compose up -d\",
