@@ -38,7 +38,6 @@ jobs:
           REGISTRY: ${{ steps.login-ecr.outputs.registry }}
           IMAGE_TAG: ${{ github.sha }}
         run: |
-          echo "API URL: ${{ secrets.VITE_AWS_BACKEND_URL }}"
           docker build \
             --build-arg VITE_AWS_BACKEND_URL="${{ secrets.VITE_AWS_BACKEND_URL }}" \
             -t $REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
@@ -49,12 +48,17 @@ jobs:
           REGISTRY: ${{ steps.login-ecr.outputs.registry }}
           IMAGE_TAG: ${{ github.sha }}
         run: |
+          IMAGE="$REGISTRY/ECR_REPOSITORY:$IMAGE_TAG"
           aws ssm send-command \
             --instance-ids "$EC2_INSTANCE_ID" \
             --document-name "AWS-RunShellScript" \
             --parameters "commands=[
               \"aws ecr get-login-password --region $AWS_REGION | docker login --username AWS --password-stdin $REGISTRY\",
-              \"docker pull $REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG\",
-              \"docker rm -f website || true\",
-              \"docker run -d --name website -p 443:8443 -v /home/ec2-user/ssl:/etc/nginx/ssl:ro $REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG\"
+              \"cd /home/ec2-user/website\",
+              \"IMAGE=$IMAGE docker compose pull\",
+              \"IMAGE=$IMAGE docker compose up -d\",
             ]"
+
+# \"docker pull $REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG\",
+# \"docker rm -f website || true\",
+# \"docker run -d --name website -p 443:8443 -v /home/ec2-user/ssl:/etc/nginx/ssl:ro $REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG\"
