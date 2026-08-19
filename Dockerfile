@@ -19,6 +19,9 @@ RUN --mount=type=cache,target=/root/.npm npm ci
 # Copy the rest of the application source code into the container
 COPY . .
 
+ARG VITE_AWS_BACKEND_URL
+ENV VITE_AWS_BACKEND_URL=$VITE_AWS_BACKEND_UR
+
 # Build the React.js application (outputs to /app/dist)
 RUN npm run build
 
