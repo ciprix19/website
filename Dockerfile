@@ -20,7 +20,7 @@ RUN --mount=type=cache,target=/root/.npm npm ci
 COPY . .
 
 ARG VITE_AWS_BACKEND_URL
-ENV VITE_AWS_BACKEND_URL=$VITE_AWS_BACKEND_UR
+ENV VITE_AWS_BACKEND_URL=$VITE_AWS_BACKEND_URL
 
 # Build the React.js application (outputs to /app/dist)
 RUN npm run build
