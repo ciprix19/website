@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 import './styles/footer.css'
 import { getVisits, incrementVisits } from '../../logic/visits'
 
