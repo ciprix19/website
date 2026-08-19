@@ -53,5 +53,5 @@ jobs:
               \"aws ecr get-login-password --region $AWS_REGION | docker login --username AWS --password-stdin $REGISTRY\",
               \"docker pull $REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG\",
               \"docker rm -f website || true\",
-              \"docker run -d --name website -p 443:8443 -v /home/ec2-user/ssl:/etc/nginx/ssl:ro$ECR_REPOSITORY:$IMAGE_TAG\"
+              \"docker run -d --name website -p 443:8443 -v /home/ec2-user/ssl:/etc/nginx/ssl:ro $ECR_REPOSITORY:$IMAGE_TAG\"
             ]"
