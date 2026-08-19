@@ -38,8 +38,8 @@ jobs:
           REGISTRY: ${{ steps.login-ecr.outputs.registry }}
           IMAGE_TAG: ${{ github.sha }}
         run: |
+          echo "API URL: ${{ vars.VITE_AWS_BACKEND_URL }}"
           docker build \
-            echo "API URL: ${{ vars.VITE_AWS_BACKEND_URL }}"
             --build-arg VITE_AWS_BACKEND_URL="${{ vars.VITE_AWS_BACKEND_URL }}" \
             -t $REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
           docker push $REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
