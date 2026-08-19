@@ -12,6 +12,7 @@ permissions:
 env:
   AWS_REGION: eu-central-1
   ECR_REPOSITORY: website/frontend
+  EC2_INSTANCE_ID: i-02391adf6d41873c1
 
 jobs:
   deploy:
@@ -31,6 +32,7 @@ jobs:
       - name: Login to Amazon ECR
         id: login-ecr
         uses: aws-actions/amazon-ecr-login@v2
+
       - name: Build and push image
         env:
           REGISTRY: ${{ steps.login-ecr.outputs.registry }}
@@ -38,3 +40,18 @@ jobs:
         run: |
           docker build -t $REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
           docker push $REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+
+      - name: Deploy to EC2
+        env:
+          REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+          IMAGE_TAG: ${{ github.sha }}
+        run: |
+          aws ssm send-command \
+            --instance-ids "$EC2_INSTANCE_ID" \
+            --document-name "AWS-RunShellScript" \
+            --parameters "commands=[
+              \"aws ecr get-login-password --region $AWS_REGION | docker login --username AWS --password-stdin $REGISTRY\",
+              \"docker pull $REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG\",
+              \"docker rm -f website || true\",
+              \"docker run -d --name website -p 443:8443 -v /home/ec2-user/ssl:/etc/nginx/ssl:ro$ECR_REPOSITORY:$IMAGE_TAG\"
+            ]"
