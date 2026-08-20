@@ -43,7 +43,7 @@ const skillsCategories: Record<string, string[]> = {
     ],
     'APIs': [
         'Apigee X / Hybrid',
-        'REST'
+        'REST',
     ]
 }
 
