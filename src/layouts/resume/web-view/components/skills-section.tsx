@@ -7,32 +7,44 @@ type SkillEntryType = {
 }
 
 const skillsCategories: Record<string, string[]> = {
-    'Backend and Scripting': [
-        'Node.js',
-        'Express.js',
-        'C++',
-        'Java',
-        'C#',
-        'Python',
-    ],
-    'Frontend Technologies': [
+    'Languages': [
         'Javascript',
         'Typescript',
+        'Java',
+        'C++',
+        'C#'
+    ],
+    'Frontend Technologies': [
         'React',
-        'Next.js',
+        'Angular',
         'HTML',
         'CSS',
-        'Angular',
     ],
-    Databases: ['SQLite', 'PostegreSQL'],
-    'Cloud and API': [
-        'Google Cloud Platform',
-        'Apigee X',
-        'Apigee Hybrid',
+    'Backend Technologies': [
+        'Node.js',
+        'Express.js',
+    ],
+    'Cloud and Devops': [
+        'GCP',
+        'AWS',
+        'Apigee X / Hybrid',
+        'Github Actions',
         'Kubernetes',
         'Docker',
+        'Terraform',
+        'Linux',
+        'Git',
+        'NGINX'
     ],
-    Tools: ['Git', 'Linux', 'Docker', 'Github Actions', 'Terraform']
+    'Databases': [
+        'PostegreSQL',
+        'Supabase',
+        'DynamoDB'
+    ],
+    'APIs': [
+        'Apigee X / Hybrid',
+        'REST'
+    ]
 }
 
 const SkillsEntry = ({ skillName }: SkillEntryType) => {
