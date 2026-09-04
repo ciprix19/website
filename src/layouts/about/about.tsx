@@ -53,7 +53,6 @@ export const About = () => {
                     list={[
                         'Guitar nerd',
                         'I love football',
-                        'Spending too much time in video games',
                         'Horror genre enthusiast',
                     ]}
                 />
